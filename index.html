@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Andy Garnier - Biochemist, Computational Biologist, and Game Developer in Montreal. MSc in Biochemistry, currently at IQVIA Laboratories.">
-    <title>Andy Garnier | Biochemist & Game Dev</title>
+    <meta name="description" content="Portfolio of Andy Garnier - Biochemist and Computational Biologist in Montreal. MSc in Biochemistry, currently at IQVIA Laboratories.">
+    <title>Andy Garnier | Biochemist & Comp Biologist</title>
     <style>
         html {
             scroll-behavior: smooth;
@@ -25,9 +25,9 @@
 
         .navbar {
             display: flex;
-            justify-content: center;
+            justify-content: Right;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 1rem 2rem 0rem 0rem;
             background-color: #0a192f;
             position: fixed;
             top: 0;
@@ -159,6 +159,115 @@
             font-weight: bold;
             z-index: 1000;
         }
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+    
+        .project {
+            background-color: #112240;
+            padding: 20px;
+            border-radius: 10px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+    
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+    
+        .project h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+    
+        .project p {
+            font-size: 1rem;
+            color: #8892b0;
+            margin-bottom: 15px;
+        }
+    
+        .project a {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid #64ffda;
+            color: #64ffda;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+    
+        .project a:hover {
+            background: #64ffda;
+            color: #0a192f;
+        }
+    
+        @media (max-width: 768px) {
+            .project {
+                width: calc(50% - 20px);
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .project {
+                width: 100%;
+            }
+        }
+        .image-rotator {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .image-rotator img {
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .image-rotator img.active {
+            opacity: 1;
+        }
+        .image-description {
+            text-align: center;
+            color: #8892b0;
+            margin-top: 10px;
+        }      
+        .image-controls {
+            text-align: center;
+            margin-top: 15px;
+        }
+    
+        .image-controls button {
+            background: transparent;
+            border: 2px solid #64ffda;
+            color: #64ffda;
+            padding: 0.5rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+    
+        .image-controls button:hover {
+            background: #64ffda;
+            color: #0a192f;
+        }
+        
     </style>
 </head>
 <body>
@@ -175,6 +284,7 @@
 
 <section class="hero fade-in" id="home">
     <div class="container">
+        
         <h1>Hello, I'm Andy Garnier</h1>
         <p>I'm a Biochemist/Computational Biologist based in Montreal.</p>
         <a href="#projects">Check out my work</a>
@@ -186,9 +296,9 @@
         <h2>About Me</h2>
         <div class="feature">
             <p>I'm a biochemist and computational biologist based in Montreal, Canada, with a passion for solving complex problems at the intersection of biology and data. I hold an <a>MSc in Biochemistry</a> from McGill University, where I investigated protein vulnerabilities in cancer through a blend of computational screening and experimental validation.</p>
-            <p>Currently, I'm an Associate Scientist at IQVIA Laboratories, where I'm <a>automating data workflows</a>, optimizing LIMS infrastructure, and conducting ELISA-based assays for both R&D and clinical projects.</p>
-            <p>Outside of the lab, I enjoy <a>communicating science</a> in creative ways. I’ve presented at conferences, earned recognition for science communication, and hosted TEDx events. My background in improv theater keeps me adaptable, engaging, and always ready to collaborate.</p>
-            <p>When I'm not pipetting, you'll probably find me out cycling or building side projects and <a href="games/" target="_blank">games</a>.</p>
+            <p>Currently, I'm an Associate Scientist at IQVIA Laboratories, where I'm <a href="#projects">automating data workflows</a>, optimizing LIMS infrastructure, and conducting ELISA-based assays for both R&D and clinical projects.</p>
+            <p>Outside of the lab, I enjoy <a href="#interests">communicating science</a> in creative ways. I’ve presented at conferences, earned recognition for science communication, and hosted TEDx events. My background in improv theater keeps me adaptable, engaging, and always ready to collaborate.</p>
+            <p>When I'm not pipetting, you'll probably find me out cycling or building side projects like browser-playable games found on the <a href="games/" target="_self">Games Hub</a>.</p>
         </div>
     </div>
 </section>
@@ -197,7 +307,27 @@
     <div class="container">
         <h2>Projects</h2>
         <div class="feature">
-            <p>Check out my past and ongoing developements on <a href="https://github.com/adgarnier" target="_blank">GitHub</a> or explore the <a href="games/" target="_blank">Games Hub</a> for browser-playable games.</p>
+        <p>Check out my past and ongoing developements on <a href="https://github.com/adgarnier" target="_blank">GitHub</a> or explore the <a href="games/" target="_blank">Games Hub</a> for browser-playable games.</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project Title 1</h3>
+                <p>Short description of Project 1. This project focuses on...</p>
+                <a href="https://github.com/adgarnier/project1" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project Title 2</h3>
+                <p>Short description of Project 2. This project focuses on...</p>
+                <a href="https://github.com/adgarnier/project2" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project Title 3</h3>
+                <p>Short description of Project 3. This project focuses on...</p>
+                <a href="https://github.com/adgarnier/project3" target="_blank">View on GitHub</a>
+            </div>
         </div>
     </div>
 </section>
@@ -206,8 +336,18 @@
     <div class="container">
         <h2>Interests</h2>
         <div class="feature">
-            <p>I'm fascinated by personalized medicine, AI-driven drug discovery, game development, and science storytelling. I’m always exploring new ways to merge creativity with technology.</p>
+            <p>I'm fascinated by computational drug discovery, bioinformatics, and science communication. I’m always exploring new ways to merge creativity with technology.</p>
+            <div class="image-rotator">
+                <img src="image1.jpg" alt="Interest Image 1" class="active">
+                <img src="image2.jpg" alt="Interest Image 2">
+                <img src="image3.jpg" alt="Interest Image 3">
+                <!-- Add more images as needed -->            
         </div>
+        <div class="image-description">Description for Interest Image 1</div>
+            <div class="image-controls">
+                <button id="prevButton">Previous</button>
+                <button id="nextButton">Next</button>
+            </div>
     </div>
 </section>
 
@@ -227,6 +367,53 @@
 <footer>
     <p>&copy; 2025 Andy Garnier. All rights reserved.</p>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.image-rotator img');
+        const descriptions = [
+            'Description for Interest Image 1',
+            'Description for Interest Image 2',
+            'Description for Interest Image 3',
+            // Add more descriptions as needed
+        ];
+        const descriptionElement = document.querySelector('.image-description');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+            descriptionElement.textContent = descriptions[currentIndex];
+        }
+
+        // Add the interval for automatic rotation
+        let imageInterval = setInterval(showNextImage, 3000); // Change image and description every 3 seconds
+
+        // Select the buttons and add event listeners
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+
+        function showPrevImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            images[currentIndex].classList.add('active');
+            descriptionElement.textContent = descriptions[currentIndex];
+        }
+
+        prevButton.addEventListener('click', () => {
+            clearInterval(imageInterval);
+            showPrevImage();
+            imageInterval = setInterval(showNextImage, 3000);
+        });
+
+        nextButton.addEventListener('click', () => {
+            clearInterval(imageInterval);
+            showNextImage();
+            imageInterval = setInterval(showNextImage, 3000);
+        });
+    });
+</script>
 
 </body>
 </html>
