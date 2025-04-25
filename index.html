@@ -236,30 +236,9 @@
             color: #0a192f;
         }
     
-        @media (max-width: 768px) {
-            .project {
-                width: calc(50% - 20px);
-            }
-            
-          .feature-content {
-            flex-direction: column; 
-            align-items: center; 
-          }
-        
-          .headshot {
-            margin-right: 0; 
-            margin-bottom: 1rem; 
-          }
-        }
-    
-        @media (max-width: 480px) {
-            .project {
-                width: 100%;
-            }
-        }
         .image-rotator {
             width: 100%;
-            height: 300px;
+            height: 500px;
             position: relative;
             overflow: hidden;
             margin-top: 20px;
@@ -307,6 +286,31 @@
         .image-controls button:hover {
             background: #64ffda;
             color: #0a192f;
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                width: calc(50% - 20px);
+            }
+            
+          .feature-content {
+            flex-direction: column; 
+            align-items: center; 
+          }
+        
+          .headshot {
+            margin-right: 0; 
+            margin-bottom: 1rem; 
+          }
+        }
+    
+        @media (max-width: 480px) {
+            .project {
+                width: 100%;
+            }
+            .image-rotator {
+                height: 300px;
+            }
         }
         
     </style>
