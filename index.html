@@ -1,8 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Andy Garnier">
-    <title>Andy Garnier</title>
+    <meta name="description" content="Portfolio of Andy Garnier - Biochemist, Computational Biologist, and Game Developer in Montreal. MSc in Biochemistry, currently at IQVIA Laboratories.">
+    <title>Andy Garnier | Biochemist & Game Dev</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body, h1, h2, h3, p, a {
             margin: 0;
             padding: 0;
@@ -18,13 +25,13 @@
 
         .navbar {
             display: flex;
-            justify-content: right;
+            justify-content: center;
             align-items: center;
             padding: 1rem 2rem;
             background-color: #0a192f;
-            position: relative;
-            width: 100%;
+            position: fixed;
             top: 0;
+            width: 100%;
             z-index: 1000;
         }
 
@@ -42,7 +49,7 @@
         .container {
             width: 80%;
             margin: auto;
-            padding-top: 0px; /* Adjust for fixed top bar */
+            padding-top: 80px;
         }
 
         .hero {
@@ -84,6 +91,14 @@
             text-align: left;
         }
 
+        .features:nth-of-type(odd) {
+            background-color: #112240;
+        }
+
+        .features:nth-of-type(even) {
+            background-color: #0a192f;
+        }
+
         .features h2 {
             margin-bottom: 2rem;
         }
@@ -106,34 +121,59 @@
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
         }
-        
+
         .feature a:hover {
             background: #64ffda;
             color: #0a192f;
         }
-        
+
         footer {
             background: #0a192f;
             color: #8892b0;
             text-align: center;
             padding: 1rem 0;
-            position: relative;
-            width: 100%;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #64ffda;
+            color: #0a192f;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
 
-<div class="navbar">
+<nav class="navbar">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#interests">Interests</a>
     <a href="#contact">Contact</a>
-    
-</div>
+</nav>
 
-<section class="hero" id="home">
+<main>
+
+<section class="hero fade-in" id="home">
     <div class="container">
         <h1>Hello, I'm Andy Garnier</h1>
         <p>I'm a Biochemist/Computational Biologist based in Montreal.</p>
@@ -141,46 +181,48 @@
     </div>
 </section>
 
-<section class="features" id="about">
+<section class="features fade-in" id="about">
     <div class="container">
         <h2>About Me</h2>
         <div class="feature">
             <p>I'm a biochemist and computational biologist based in Montreal, Canada, with a passion for solving complex problems at the intersection of biology and data. I hold an <a>MSc in Biochemistry</a> from McGill University, where I investigated protein vulnerabilities in cancer through a blend of computational screening and experimental validation.</p>
-            
             <p>Currently, I'm an Associate Scientist at IQVIA Laboratories, where I'm <a>automating data workflows</a>, optimizing LIMS infrastructure, and conducting ELISA-based assays for both R&D and clinical projects.</p>
-            
             <p>Outside of the lab, I enjoy <a>communicating science</a> in creative ways. I’ve presented at conferences, earned recognition for science communication, and hosted TEDx events. My background in improv theater keeps me adaptable, engaging, and always ready to collaborate.</p>
-            
-            <p>When I'm not pipetting, you'll probably find me out cycling or building side projects and <a href="https://adgarnier.github.io/games/" target="_blank">games</a>.</p>
-
+            <p>When I'm not pipetting, you'll probably find me out cycling or building side projects and <a href="games/" target="_blank">games</a>.</p>
         </div>
     </div>
 </section>
 
-<section class="features" id="projects">
+<section class="features fade-in" id="projects">
     <div class="container">
         <h2>Projects</h2>
         <div class="feature">
-            <p>Details about your projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet consectetur dolor in elementum <a href="https://github.com/adgarnier" target="_blank">GitHub</a>.</p>
-        </div>
-        <div class="feature">
-            <p>Details about your projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet consectetur dolor in elementum.</p>
+            <p>Check out my past and ongoing developements on <a href="https://github.com/adgarnier" target="_blank">GitHub</a> or explore the <a href="games/" target="_blank">Games Hub</a> for browser-playable games.</p>
         </div>
     </div>
 </section>
 
-<section class="features" id="interests">
+<section class="features fade-in" id="interests">
     <div class="container">
         <h2>Interests</h2>
         <div class="feature">
-            <p>Details about your projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet consectetur dolor in elementum.</p>
-        </div>
-        <div class="feature">
-            <p>Details about your projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet consectetur dolor in elementum.</p>
+            <p>I'm fascinated by personalized medicine, AI-driven drug discovery, game development, and science storytelling. I’m always exploring new ways to merge creativity with technology.</p>
         </div>
     </div>
 </section>
 
+<section class="features fade-in" id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <div class="feature">
+            <p>Let’s connect! You can find me on <a href="https://www.linkedin.com/in/andygarnier" target="_blank">LinkedIn</a> or shoot me an email at <a href="mailto:andy.garnier@hotmail.ca">andygarnier@hotmail.ca</a>.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<a id="backToTop" href="#home">↑ Top</a>
 
 <footer>
     <p>&copy; 2025 Andy Garnier. All rights reserved.</p>
