@@ -241,7 +241,10 @@
             text-decoration: none;
             font-weight: bold;
             z-index: 1000;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.5s ease-in-out; /* Transition for fade effect */
         }
+        
         .projects-grid {
             display: flex;
             flex-wrap: wrap;
@@ -605,15 +608,15 @@
         const backToTopButton = document.getElementById('backToTop');
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) { // Adjust the value as needed
-                backToTopButton.style.display = 'block';
+            if (window.scrollY > 300) { // Adjust the value as needed
+                backToTopButton.style.opacity = '1'; // Fade in
             } else {
-                backToTopButton.style.display = 'none';
+                backToTopButton.style.opacity = '0'; // Fade out
             }
         });
 
-        // Initially hide the button
-        backToTopButton.style.display = 'none';
+        // Initially set the opacity to 0 (hidden)
+        backToTopButton.style.opacity = '0';
     });
 </script>
     
