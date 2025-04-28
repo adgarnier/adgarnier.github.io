@@ -600,5 +600,22 @@
     });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) { // Adjust the value as needed
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Initially hide the button
+        backToTopButton.style.display = 'none';
+    });
+</script>
+    
 </body>
 </html>
