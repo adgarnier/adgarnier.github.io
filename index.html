@@ -4,534 +4,174 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH67TECNHS"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-TH67TECNHS');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TH67TECNHS');
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Andy Garnier - Medical Writer, Biochemist, and Computational Biologist in Montreal. MSc in Biochemistry. Currently at bMod Communications.">
-    <title>Andy Garnier | Medical Writer & Biochemist & Comp Biologist</title>
+    <meta name="description" content="Portfolio of Andy Garnier, a medical writer, biochemist, and computational biologist working across science communication, drug discovery, and data.">
+    <title>Andy Garnier | Medical Writer &amp; Computational Biologist</title>
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body, h1, h2, h3, p, a {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            color: #ccd6f6;
-        }
-        
-        body {
-            background-color: #0a192f;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: Right;
-            align-items: center;
-            padding: 1rem 2rem 1rem 0rem;
-            background-color: #0a192f;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        
-        .navbar {
-            background: rgba(10, 25, 47, 0.95);
-            backdrop-filter: blur(6px);
-        }
-
-        .navbar a {
-            color: #64ffda;
-            margin: 0 20px;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .resume-button {
-            background: transparent;
-            border: 2px solid #64ffda;
-            color: #64ffda;
-            padding: 0.3rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-            margin: 0 10px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
-        
-        .resume-button:hover {
-            background: #64ffda;
-            color: #0a192f;
-        }
-        
-        .menu-toggle {
-            display: none;
-            font-size: 2rem;
-            color: #64ffda;
-            cursor: pointer;
-            padding-right: 1rem;
-        }
-        
-        .navbar-links {
-            display: flex;
-            align-items: center;
-            transition: max-height 0.3s ease-in-out;
-            overflow: hidden;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            padding-top: 40px;
-        }
-
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            color: #8892b0;
-        }
-
-        .hero a {
-            display: inline-block;
-            background: transparent;
-            border: 2px solid #64ffda;
-            color: #64ffda;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-            margin-top: 2rem;
-        }
-
-        .hero a:hover {
-            background: #64ffda;
-            color: #0a192f;
-        }
-
-        .features .container {
-          text-align: left;
-        }
-        
-        .feature-content {
-          display: flex;
-          align-items: flex-start;
-          justify-content: left;
-          flex-wrap: wrap; 
-          margin-top: rem;
-        }
-        
-        .headshot {
-          width: 250px; 
-          height: 250px; 
-          border-radius: 50%; 
-          object-fit: cover; 
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-          margin-right: 1rem; 
-          margin-left: 1rem;
-          margin-top: 1rem;
-        }
-        
-        .text-content {
-          flex: 1;
-          max-width: 100%; 
-        }
-
-        .features {
-            padding: 5rem 0;
-            text-align: left;
-        }
-
-        .features:nth-of-type(odd) {
-            background-color: #112240;
-        }
-
-        .features:nth-of-type(even) {
-            background-color: #0a192f;
-        }
-
-        .features h2 {
-            margin-bottom: 2rem;
-        }
-
-        .feature {
-            margin-bottom: 2rem;
-        }
-
-        .feature p {
-            max-width: 100%;
-            margin: 0.5rem 0;
-            color: #8892b0;
-        }
-
-        .feature a {
-            display: inline-block;
-            background: transparent;
-            color: #64ffda;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .feature a:hover {
-            background: #64ffda;
-            color: #0a192f;
-        }
-
-        footer {
-            background: #0a192f;
-            color: #8892b0;
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        
-        .fade-in.in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .slide-in-left {
-            opacity: 0;
-            transform: translateX(-30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        
-        .slide-in-left.in-view {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        #backToTop {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background-color: #64ffda;
-            color: #0a192f;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            z-index: 1000;
-            opacity: 0; /* Start hidden */
-            transition: opacity 0.5s ease-in-out; /* Transition for fade effect */
-        }
-        
-        .projects-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-between;
-        }
-    
-        .project {
-            background-color: #112240;
-            padding: 20px;
-            border-radius: 10px;
-            width: calc(33.333% - 20px);
-            box-sizing: border-box;
-            text-align: center;
-        }
-    
-        .project img {
-            width: 100%;
-            height: auto;
-            position: relative;
-            overflow: hidden;
-            margin-top: 20px;
-            max-width: 100%;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-    
-        .project h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-    
-        .project p {
-            font-size: 1rem;
-            color: #8892b0;
-            margin-bottom: 15px;
-        }
-        
-        .project:hover {
-            transform: scale(1.02);
-            box-shadow: 0px 4px 20px rgba(100, 255, 218, 0.2);
-            transition: all 0.3s ease-in-out;
-        }
-        
-        .project a {
-            display: inline-block;
-            background: transparent;
-            border: 2px solid #64ffda;
-            color: #64ffda;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-        }
-    
-        .project a:hover {
-            background: #64ffda;
-            color: #0a192f;
-        }
-    
-        .image-rotator {
-            width: 100%;
-            height: 450px;
-            position: relative;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-        
-        .image-rotator img {
-            width: 100%;
-            height: auto;
-            max-height: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            transition: opacity 1s;
-            object-fit: contain; /* Makes it fit inside without stretching */
-        }
-
-        .image-rotator img.active {
-            opacity: 1;
-        }
-        .image-description {
-            text-align: center;
-            color: #8892b0;
-            margin-top: 10px;
-        }      
-        .image-controls {
-            text-align: center;
-            margin-top: 15px;
-        }
-    
-        .image-controls button {
-            background: transparent;
-            border: 2px solid #64ffda;
-            color: #64ffda;
-            padding: 0.5rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-            margin: 0 10px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
-    
-    
-        .image-controls button:hover {
-            background: #64ffda;
-            color: #0a192f;
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-        
-            .navbar-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                background-color: #0a192f;
-                position: absolute;
-                top: 70px;
-                right: 0;
-                padding: 1rem;
-                box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
-            }
-        
-            .navbar-links a, .resume-button {
-                margin: 10px 0;
-                font-size: 1.2rem;
-                width: 100%;
-                text-align: center;
-            }
-        
-            .navbar-links.active {
-                display: flex;
-            }
-
-            .project {
-                width: calc(50% - 20px);
-            }
-            
-          .feature-content {
-            flex-direction: column; 
-            align-items: center; 
-          }
-        
-          .headshot {
-            margin-right: 0; 
-            margin-bottom: 1rem; 
-          }
-          
-        }
-    
-        @media (max-width: 480px) {
-            .project {
-                width: 100%;
-            }
-            .image-rotator {
-                height: 300px;
-            }
-        }
-        
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<nav class="navbar">
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+<body>
+<nav class="navbar" aria-label="Primary navigation">
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navbar-links">☰</button>
     <div class="navbar-links" id="navbar-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="#work">Work</a>
         <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
         <a href="resume/Andy_Garnier_Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-button">Resume</a>
     </div>
 </nav>
 
 <main>
+    <section class="hero fade-in" id="home">
+        <div class="container">
+            <p class="eyebrow">Medical writer · Computational biologist</p>
+            <h1>Andy Garnier</h1>
+            <p class="hero-copy">I translate complex science into clear, useful communication.
+            <div class="hero-actions">
+                <a class="hero-link" href="medical-writing-portfolio.html">Explore my medical writing</a>
+                <a class="hero-link" href="#work">View scientific and technical work</a>
+            </div>
+        </div>
+    </section>
 
-<section class="hero fade-in" id="home">
-    <div class="container">
-        <h2>Hello, I'm </h2>
-        <h1>Andy Garnier</h1>
-        <p>a Medical Writer, Biochemist, and Computational Biologist based in Montreal.</p>
-        <a href="#projects">Check out my work</a>
-    </div>
-</section>
-
-<section class="features fade-in" id="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="feature">
-            <div class="feature-content">
-                <div class="text-content">
-                    <p>I'm a biochemist and computational biologist based in Montreal, Canada, with a passion for solving complex problems at the intersection of biology and data. I hold a <a href="masters/" target="_self">MSc in Biochemistry</a> from McGill University, where I investigated protein vulnerabilities in cancer through a blend of computational screening and experimental validation.</p>
-                    <p>Currently, I'm a Medical Writer at bMod Communications, where I transform complex scientific concepts into compelling narratives for healthcare audiences. Prior to this, I worked as an Associate Scientist at IQVIA Laboratories, <a href="#projects">automating data workflows</a>, optimizing LIMS infrastructure, and conducting ELISA-based assays for both R&D and clinical projects.</p>
-                    <p>Outside of the lab, I enjoy <a href="#interests">communicating science</a> in creative ways. I’ve presented at conferences, earned recognition for science communication, and hosted TEDx events. My background in improv theater keeps me adaptable, engaging, and always ready to collaborate.</p>
-                    <p>When I'm not pipetting, you'll probably find me out cycling or building side projects like browser-playable games found on the <a href="games/" target="_self">Games Hub</a>.</p>
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <p class="eyebrow">About me</p>
+            <h2>Working at the intersection of science, communication, and data</h2>
+            <div class="profile-grid">
+                <div class="profile-copy">
+                    <p>I’m a biochemist and computational biologist with experience translating complex evidence for specialist and lay audiences. I hold a <a href="#interests">MSc in Biochemistry </a> from McGill University, where I investigated protein vulnerabilities in cancer through computational screening and experimental validation.</p>
+                    <p>My professional experience spans pharmaceutical <a href="medical-writing-portfolio.html">medical writing </a>, laboratory science, and workflow automation. I have developed communications for healthcare professionals and patients, conducted lab work across R&D and clinical projects, and programmed <a href="#work">tools for automation</a>.</p>
+                    <p>Outside of research and engaging in <a href="#interests">science communication</a>, you can find me running, cycling, performing live theatre, or working on side projects like <a href="#games"> browser-playable games</a>. 
                 </div>
-                <img src="images/IMG_headshot.JPG" alt="Headshot of Andy Garnier" loading="lazy" class="headshot">
+                <img src="images/IMG_headshot.JPG" alt="Headshot of Andy Garnier" loading="lazy">
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="features fade-in" id="projects">
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="feature">
-        <p>Check out my past and ongoing developements on <a href="https://github.com/adgarnier" target="_blank">GitHub</a> or explore the <a href="games/" target="_self">Games Hub</a> for browser-playable games.</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project fade-in slide-in-left">
-                <img src="images/project1.png" alt="Project 1" loading="lazy">
-                <h3>Andy's Arcade Game Hub</h3>
-                <p>Collection of 10 original, browser-playable games, each developed from scratch using Python</p>
-                <a href="/games" target="_self">Visit Game Hub</a>
-            </div>
-            <div class="project fade-in slide-in-left">
-                <img src="images/project2.png" alt="Project 2" loading="lazy">
-                <h3>SoftMax Pro Analysis Tool</h3>
-                <p>Python-based GUI application for automating various plate data analysis tasks using SoftMax Pro</p>
-                <a href="https://github.com/adgarnier/smp_analysis_tool" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project fade-in slide-in-left">
-                <img src="images/project3.png" alt="Project 3" loading="lazy">
-                <h3>Virtual Screening for Drugs</h3>
-                <p>MSc Thesis for virtual screening of ligands as potential therapeutics for targeted cancer treatment</p>
-                <a href="/masters" target="_self">View MSc Thesis</a>
-            </div>
-        </div>
-    </div>
-</section>
+    <section class="section" id="work">
+        <div class="container">
+            <p class="eyebrow">Selected work</p>
+            <h2>Writing, research, and technical projects</h2>
+            <p class="section-intro">Explore selected work across medical communications, computational biology, workflow automation, and creative programming.</p>
 
-<section class="features fade-in" id="interests">
-    <div class="container">
-        <h2>Interests</h2>
-        <div class="feature">
-            <p>I'm fascinated by computational drug discovery, bioinformatics, and science communication. I’m always exploring new ways to merge creativity with technology.</p>
-            <div class="image-rotator">
-                <img src="images/IMG_002.JPG" alt="Interest Image 1" loading="lazy" class="active">
-                <img src="images/IMG_001.JPG" alt="Interest Image 2" loading="lazy">
-                <img src="images/IMG_004.JPG" alt="Interest Image 3" loading="lazy">
-                <img src="images/IMG_007.jpg" alt="Interest Image 5" loading="lazy">
-                <img src="images/IMG_005.JPG" alt="Interest Image 6" loading="lazy">
-                <img src="images/IMG_006.JPG" alt="Interest Image 7" loading="lazy">
-                <!-- Add more images as needed -->            
-        </div>
-        <div class="image-description">McGill's BUGS Research Day Speaker - 2025</div>
-            <div class="image-controls">
-                <button id="prevButton">Previous</button>
-                <button id="nextButton">Next</button>
+            <div class="showcase-group">
+                <h3 class="group-heading">Projects</h3>
+                <div class="showcase-grid">
+                    <button class="showcase-card fade-in" type="button" data-dialog="dialog-schizophrenia">
+                        <div class="showcase-image-frame"> <img src="images/project1.png" alt="Description of image" class="showcase-image"> </div>
+                        <h3>Writing Portfolio</h3>
+                        <p>Details about work examples, therapeutic areas, and deliverable formats</p>
+                        <a class="card-link" href="medical-writing-portfolio.html">View  portfolio</a>
+                    </button>
+
+                    <button class="showcase-card fade-in" type="button" data-dialog="dialog-schizophrenia">
+                        <div class="showcase-image-frame"> <img src="images/project2.png" alt="Description of image" class="showcase-image"> </div>
+                        <h3>Virtual Screening</h3>
+                        <p>MSc thesis for virtual screening of ligands as potential therapeutics for targeted cancer treatment</p>
+                        <span class="card-link" href="/masters" target="_self">View MSc thesis</span>
+                    </button>
+                    
+                    <button class="showcase-card fade-in" type="button" data-dialog="dialog-schizophrenia">
+                        <div class="showcase-image-frame"> <img src="images/project3.png" alt="Description of image" class="showcase-image"> </div>
+                        <h3>Andy's Arcade</h3>
+                        <p>Collection of 10 original, browser-playable games, each developed from scratch using Python</p>
+                        <span class="card-link" href="/games" target="_self">View arcade</span>
+                    </button>
+                </div>
             </div>
-    </div>
-</section>
 
-<section class="features" id="contact">
-    <div class="container">
-        <h2>Contact</h2>
-        <div class="feature">
-            <p>Let’s connect! You can find me on <a href="https://www.linkedin.com/in/andygarnier" target="_blank">LinkedIn</a> or shoot me an email at <a href="mailto:andy.garnier@hotmail.ca">andygarnier@hotmail.ca</a>.</p>
+            <div class="showcase-group">
+                <h3 class="group-heading">Automation tools</h3>
+
+                <div class="showcase-grid">
+                    <button class="showcase-card fade-in" type="button" data-dialog="dialog-schizophrenia">
+                        <div class="showcase-image-frame"> <img src="images/project4.png" alt="Description of image" class="showcase-image"> </div>
+                        <h3>PDF Handler</h3>
+                        <p>Python-based GUI application for automated PDF transcription and formating word documents along with reference sourcing</p>
+                        <span class="card-link" href="https://github.com/adgarnier/" target="_blank">View GitHub</span>
+                    </button>
+
+                    <button class="showcase-card fade-in" type="button" data-dialog="dialog-schizophrenia">
+                        <div class="showcase-image-frame"> <img src="images/project5.png" alt="Description of image" class="showcase-image"> </div>
+                        <h3>Reference Renumberer</h3>
+                        <p>Python-based GUI application for reference mapping and word document updating</p>
+                        <span class="card-link" href="https://github.com/adgarnier/" target="_blank">View GitHub</span>
+                    </button>        
+
+                    <button class="showcase-card fade-in" type="button" data-dialog="dialog-schizophrenia">
+                        <div class="showcase-image-frame"> <img src="images/project6.png" alt="Description of image" class="showcase-image"> </div>
+                        <h3>SMP Analysis Tool</h3>
+                        <p>Python-based GUI application for automating various plate data analysis tasks using SoftMax Pro</p>
+                        <span class="card-link" href="https://github.com/adgarnier/" target="_blank">View GitHub</span>
+                    </button>
+                </div>  
+                </article>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <section class="section section-alt" id="interests">
+        <div class="container">
+            <p class="eyebrow">Beyond the page and the lab</p>
+            <h2>Science communication and creative work</h2>
+            <div class="interests-layout">
+                <div class="interests-copy">
+                    <p>I’m fascinated by computational drug discovery, bioinformatics, and science communication. I’m always exploring new ways to merge creativity with technology and to make technically complex ideas more engaging.</p>
+                    <p>Outside of work, that same curiosity drives me to seek out new challenges. Whether through hosting on TEDx events, performing improv theatre, or exploring new roads by bike, I'm always up for a challenge.</p>
+                </div>
+
+                <div class="carousel" aria-label="Selected speaking and creative experiences">
+                    <div class="image-rotator">
+                        <img src="images/IMG_2022_01.JPG" alt="" loading="lazy" class="active">
+                        <img src="images/IMG_2022_02.JPG" alt="" loading="lazy">
+                        <img src="images/IMG_2023_01.JPG" alt="" loading="lazy">
+                        <img src="images/IMG_2023_02.JPG" alt="" loading="lazy">
+                        <img src="images/IMG_2024_01.JPG" alt="" loading="lazy">
+                        <img src="images/IMG_2025_01.JPG" alt="" loading="lazy">
+                        <img src="images/IMG_2025_02.JPG" alt="" loading="lazy">
+                        <img src="images/IMG_2026_01.JPG" alt="" loading="lazy">
+                    </div>
+                    <p class="image-description" aria-live="polite">McGill Drama Festival Actor — 2022</p>
+                    <div class="image-controls">
+                        <button id="prevButton" type="button" aria-label="Show previous image">Previous</button>
+                        <button id="nextButton" type="button" aria-label="Show next image">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-panel fade-in">
+                <div>
+                    <p class="eyebrow">Get in touch</p>
+                    <h2>Let’s connect</h2>
+                    <p>Interested in my work or want to start a conversation? Connect with me on LinkedIn and shoot me a message.</p>
+                </div>
+                <div class="contact-actions">
+                    <a class="hero-link" href="https://www.linkedin.com/in/andygarnier" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
-<a id="backToTop" href="#home">↑ Top</a>
+<a id="backToTop" href="#home" aria-label="Back to top">↑ Top</a>
 
 <footer>
-    <p>&copy; 2025 Andy Garnier. All rights reserved.</p>
+    <p>&copy; 2026 Andy Garnier. All rights reserved.</p>
 </footer>
 
 <script>
@@ -539,96 +179,73 @@
     const navbarLinks = document.getElementById('navbar-links');
 
     menuToggle.addEventListener('click', () => {
-        navbarLinks.classList.toggle('active');
+        const isOpen = navbarLinks.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
     });
-</script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const images = document.querySelectorAll('.image-rotator img');
-        const descriptions = [
-            'McGill\'s BUGS Research Day Speaker - 2025',
-            'TEDxPlateauMontRoyal Event Host - 2024',
-            'Terry Fox Day - 2023',
-            'TEDxAveLorne Event Host - 2023',
-            'Montreal Sketchfest Best Newcomer - 2022',
-            'McGill Drama Festival Actor - 2022',
-            // Add more descriptions as needed
-        ];
-        const descriptionElement = document.querySelector('.image-description');
-        let currentIndex = 0;
-
-        function showNextImage() {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add('active');
-            descriptionElement.textContent = descriptions[currentIndex];
-        }
-
-        // Add the interval for automatic rotation
-        let imageInterval = setInterval(showNextImage, 5000); // Change image and description every 3 seconds
-
-        // Select the buttons and add event listeners
-        const prevButton = document.getElementById('prevButton');
-        const nextButton = document.getElementById('nextButton');
-
-        function showPrevImage() {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            images[currentIndex].classList.add('active');
-            descriptionElement.textContent = descriptions[currentIndex];
-        }
-
-        prevButton.addEventListener('click', () => {
-            clearInterval(imageInterval);
-            showPrevImage();
-            imageInterval = setInterval(showNextImage, 3000);
+    navbarLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navbarLinks.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open navigation');
         });
+    });
 
+    const images = Array.from(document.querySelectorAll('.image-rotator img'));
+    const descriptions = [
+        'McGill Drama Festival Actor — 2022',
+        'Montreal Sketchfest Best Newcomer — 2022',
+        'Terry Fox Day — 2023',
+        'TEDxAveLorne Event Host — 2023',
+        'TEDxPlateauMontRoyal Event Host — 2024',
+        'McGill’s BUGS Research Day Speaker — 2025',
+        'Sunday Night Improv Actor — 2025',
+        'Canadian Cancer Society Hill Day — 2026',
+
+    ];
+    const descriptionElement = document.querySelector('.image-description');
+    const previousButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    let currentIndex = 0;
+    let imageInterval;
+
+    function showImage(index) {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (index + images.length) % images.length;
+        images[currentIndex].classList.add('active');
+        descriptionElement.textContent = descriptions[currentIndex];
+    }
+
+    function restartCarousel() {
+        clearInterval(imageInterval);
+        imageInterval = setInterval(() => showImage(currentIndex + 1), 5000);
+    }
+
+    if (images.length && previousButton && nextButton && descriptionElement) {
+        restartCarousel();
+        previousButton.addEventListener('click', () => {
+            showImage(currentIndex - 1);
+            restartCarousel();
+        });
         nextButton.addEventListener('click', () => {
-            clearInterval(imageInterval);
-            showNextImage();
-            imageInterval = setInterval(showNextImage, 3000);
+            showImage(currentIndex + 1);
+            restartCarousel();
         });
-    });
-</script>
+    }
 
-<script>
-    // Scroll Animations
-    document.addEventListener('DOMContentLoaded', function () {
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
-            });
-        }, observerOptions);
-
-        const elements = document.querySelectorAll('.fade-in');
-        elements.forEach(el => observer.observe(el));
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const backToTopButton = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) { // Adjust the value as needed
-                backToTopButton.style.opacity = '1'; // Fade in
-            } else {
-                backToTopButton.style.opacity = '0'; // Fade out
-            }
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('in-view');
         });
+    }, { threshold: 0.08 });
 
-        // Initially set the opacity to 0 (hidden)
-        backToTopButton.style.opacity = '0';
-    });
+    document.querySelectorAll('.fade-in').forEach(element => observer.observe(element));
+
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        backToTopButton.classList.toggle('visible', window.scrollY > 450);
+    }); 
 </script>
-    
 </body>
 </html>
